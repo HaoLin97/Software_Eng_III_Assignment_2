@@ -1,0 +1,11 @@
+language: java
+
+jdk: oraclejdk8
+
+before install:
+  - mvn clean install
+
+notifications:
+  email:
+    recipients:
+      h.lin2@nuigalway.ie
