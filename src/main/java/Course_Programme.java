@@ -6,8 +6,8 @@ public class Course_Programme {
     String name;
     DateTime start_date;
     DateTime end_date;
-    ArrayList<Student> list_of_students;
-    ArrayList<Module> list_of_modules;
+    ArrayList<Student> list_of_students = new ArrayList<Student>();
+    ArrayList<Module> list_of_modules = new ArrayList<Module>();
 
     public Course_Programme(String course_name)
     {
@@ -49,6 +49,14 @@ public class Course_Programme {
         }
     }
 
+    public void remove_student(Student student)
+    {
+        if(list_of_students.contains(student))
+        {
+            list_of_students.remove(student);
+        }
+    }
+
     public ArrayList<Module> getList_of_modules() {
         return list_of_modules;
     }
@@ -58,6 +66,14 @@ public class Course_Programme {
         if(!list_of_modules.contains(module))
         {
             list_of_modules.add(module);
+        }
+    }
+
+    public void remove_module(Module module)
+    {
+        if(list_of_modules.contains(module))
+        {
+            list_of_modules.remove(module);
         }
     }
 }

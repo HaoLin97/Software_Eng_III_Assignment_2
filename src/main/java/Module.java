@@ -66,4 +66,12 @@ public class Module {
         }
     }
 
+    public void removeAssociated_courses(Course_Programme course)
+    {
+        if (this.associated_course.contains(course))
+        {
+            this.associated_course.remove(course);
+        }
+    }
+
 }
