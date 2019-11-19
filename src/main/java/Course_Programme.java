@@ -9,9 +9,11 @@ public class Course_Programme {
     ArrayList<Student> list_of_students = new ArrayList<Student>();
     ArrayList<Module> list_of_modules = new ArrayList<Module>();
 
-    public Course_Programme(String course_name)
+    public Course_Programme(String course_name, DateTime start, DateTime end)
     {
         name = course_name;
+        start_date = start;
+        end_date = end;
     }
 
     public String getName() {

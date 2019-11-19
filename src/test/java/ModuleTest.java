@@ -66,6 +66,9 @@ public class ModuleTest {
         String id = "CT417";
         Module uut = new Module(name, id);
 
+        Assert.assertEquals(uut.getId(), "CT417");
+        Assert.assertEquals(uut.getModule_name(), "Software Engineering");
+
         uut.setId("new Id");
         uut.setModule_name("new Name");
 

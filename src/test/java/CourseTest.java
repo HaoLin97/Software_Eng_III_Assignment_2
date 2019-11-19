@@ -10,7 +10,9 @@ public class CourseTest {
 
     @Test
     public void Test_Junit_1_add_remove_modules(){
-        Course_Programme uut = new Course_Programme("BP");
+        DateTime start = new DateTime("2000-01-01");
+        DateTime end = new DateTime("2010-01-01");
+        Course_Programme uut = new Course_Programme("BP", start, end);
 
         Module m1 = mock(Module.class);
         Module m2 = mock(Module.class);
@@ -30,7 +32,9 @@ public class CourseTest {
     }
     @Test
     public void Test_Junit_2_add_remove_students(){
-        Course_Programme uut = new Course_Programme("BP");
+        DateTime start = new DateTime("2000-01-01");
+        DateTime end = new DateTime("2010-01-01");
+        Course_Programme uut = new Course_Programme("BP", start, end);
 
         Student s1 = mock(Student.class);
         Student s2 = mock(Student.class);
@@ -52,16 +56,24 @@ public class CourseTest {
     @Test
     public void Test_Junit_3_getters_setters()
     {
-        Course_Programme uut = new Course_Programme("BP");
-
         DateTime start = new DateTime("2000-01-01");
         DateTime end = new DateTime("2010-01-01");
 
-        uut.setStart_date(start);
-        uut.setEnd_date(end);
+        Course_Programme uut = new Course_Programme("BP", start, end);
 
         Assert.assertEquals(start, uut.getStart_date());
         Assert.assertEquals(end, uut.getEnd_date());
         Assert.assertEquals("BP", uut.getName());
+
+        DateTime start_2 = new DateTime("2001-01-01");
+        DateTime end_2 = new DateTime("2011-01-01");
+
+        uut.setStart_date(start_2);
+        uut.setEnd_date(end_2);
+        uut.setName("ECE");
+
+        Assert.assertEquals(start_2, uut.getStart_date());
+        Assert.assertEquals(end_2, uut.getEnd_date());
+        Assert.assertEquals("ECE", uut.getName());
     }
 }
