@@ -20,7 +20,7 @@ public class StudentTest {
         Assert.assertEquals(uut.getDate_of_birth(), dob);
         Assert.assertEquals(uut.getCourse(), course);
         Assert.assertEquals(uut.getModule(), module);
-        Assert.assertEquals(uut.getStudent_id(), id);
+        Assert.assertEquals(Double.toString(uut.getStudent_id()), Double.toString(id));
         Assert.assertEquals(uut.getUsername(), name+id);
     }
 
@@ -55,7 +55,7 @@ public class StudentTest {
         Assert.assertEquals(uut.getDate_of_birth(), dob_2);
         Assert.assertEquals(uut.getCourse(), course_2);
         Assert.assertEquals(uut.getModule(), module_2);
-        Assert.assertEquals(uut.getStudent_id(), id_2);
+        Assert.assertEquals(Double.toString(uut.getStudent_id()), Double.toString(id_2));
         Assert.assertEquals(uut.getUsername(), name_2+id_2);
     }
 }

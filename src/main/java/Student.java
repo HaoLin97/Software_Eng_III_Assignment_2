@@ -68,7 +68,7 @@ public class Student {
     }
 
     public String getUsername() {
-        this.username = name + age;
+        this.username = name + student_id;
         return username;
     }
 }
